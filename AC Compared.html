@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Comparison Calculator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Comparison Calculator</h1>
+
+    <!-- Loan 1 Inputs -->
+    <h2>Loan 1</h2>
+    <form id="loan1-form">
+      <label for="loan1-amount">Loan Amount ($):</label>
+      <input type="number" id="loan1-amount" required>
+
+      <label for="loan1-interest-rate">Annual Interest Rate (%):</label>
+      <input type="number" id="loan1-interest-rate" required>
+
+      <label for="loan1-term">Loan Term (years):</label>
+      <input type="number" id="loan1-term" required>
+
+      <button type="submit">Calculate Loan 1</button>
+    </form>
+
+    <!-- Loan 2 Inputs -->
+    <h2>Loan 2</h2>
+    <form id="loan2-form">
+      <label for="loan2-amount">Loan Amount ($):</label>
+      <input type="number" id="loan2-amount" required>
+
+      <label for="loan2-interest-rate">Annual Interest Rate (%):</label>
+      <input type="number" id="loan2-interest-rate" required>
+
+      <label for="loan2-term">Loan Term (years):</label>
+      <input type="number" id="loan2-term" required>
+
+      <button type="submit">Calculate Loan 2</button>
+    </form>
+
+    <div id="results">
+      <h2>Comparison Results</h2>
+      <div id="loan1-results">
+        <p id="loan1-monthly-payment"></p>
+        <p id="loan1-total-interest"></p>
+        <p id="loan1-total-payment"></p>
+      </div>
+
+      <div id="loan2-results">
+        <p id="loan2-monthly-payment"></p>
+        <p id="loan2-total-interest"></p>
+        <p id="loan2-total-payment"></p>
+      </div>
+    </div>
+    
+    <div>
+        <h2>Amortization Schedules Comparison</h2>
+        <div id="comparison-amortization-schedule">
+        <table id="loan1-schedule">
+            <thead>
+            <tr>
+                <th>Loan 1: Payment #</th>
+                <th>Principal Payment</th>
+                <th>Interest Payment</th>
+                <th>Remaining Balance</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <table id="loan2-schedule">
+            <thead>
+            <tr>
+                <th>Loan 2: Payment #</th>
+                <th>Principal Payment</th>
+                <th>Interest Payment</th>
+                <th>Remaining Balance</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
